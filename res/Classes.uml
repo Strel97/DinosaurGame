@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-440.0" y="385.0">com.strel.game.entities.states.PlayerRunning</node>
+    <node x="-307.0" y="604.0">com.strel.game.engine.Font</node>
+    <node x="-7.0" y="307.0">com.strel.game.engine.GameRunning</node>
+    <node x="-139.0" y="531.0">com.strel.game.animation.Animation</node>
+    <node x="-323.5" y="78.0">com.strel.game.entities.MovingEntity</node>
+    <node x="-440.0" y="531.0">com.strel.game.utils.ImageLoader</node>
+    <node x="-187.5" y="78.0">com.strel.game.entities.Player</node>
+    <node x="-158.0" y="156.0">com.strel.game.entities.road.Cloud</node>
+    <node x="-62.75" y="229.0">com.strel.game.engine.GameState</node>
+    <node x="-361.5" y="307.0">com.strel.game.entities.states.PlayerState</node>
+    <node x="-361.5" y="229.0">com.strel.game.entities.states.EntityState</node>
+    <node x="-259.0" y="156.0">com.strel.game.entities.road.Hillock</node>
+    <node x="50.0" y="458.0">com.strel.game.entities.road.RoadObjects</node>
+    <node x="-129.0" y="307.0">com.strel.game.engine.GamePaused</node>
+    <node x="-286.0" y="531.0">com.strel.game.engine.GameConfig</node>
+    <node x="-272.0" y="458.0">com.strel.game.animation.NewAnimation</node>
+    <node x="-346.0" y="156.0">com.strel.game.entities.road.Stone</node>
+    <node x="-202.0" y="604.0">com.strel.game.engine.Game</node>
+    <node x="1.0" y="531.0">com.strel.game.GamePanel</node>
+    <node x="-13.5" y="78.0">com.strel.game.entities.Score</node>
+    <node x="-440.0" y="458.0">com.strel.game.engine.FrameListener</node>
+    <node x="-144.0" y="0.0">com.strel.game.entities.Entity</node>
+    <node x="-440.0" y="156.0">com.strel.game.entities.road.Cactus</node>
+    <node x="-111.0" y="458.0">com.strel.game.input.InputHandler</node>
+    <node x="-93.5" y="78.0">com.strel.game.entities.road.Road</node>
+    <node x="-297.0" y="385.0">com.strel.game.entities.states.PlayerJumping</node>
+    <node x="-440.0" y="604.0">com.strel.game.Launcher</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.strel.game.engine.GameRunning" target="com.strel.game.engine.GameState">
+      <point x="0.0" y="-14.0" />
+      <point x="47.5" y="282.0" />
+      <point x="8.5" y="282.0" />
+      <point x="23.75" y="14.0" />
+    </edge>
+    <edge source="com.strel.game.entities.road.Road" target="com.strel.game.entities.Entity">
+      <point x="0.0" y="-14.0" />
+      <point x="-63.5" y="58.0" />
+      <point x="-97.75" y="58.0" />
+      <point x="9.25" y="14.0" />
+    </edge>
+    <edge source="com.strel.game.engine.GamePaused" target="com.strel.game.engine.GameState">
+      <point x="0.0" y="-14.0" />
+      <point x="-78.0" y="282.0" />
+      <point x="-39.0" y="282.0" />
+      <point x="-23.75" y="14.0" />
+    </edge>
+    <edge source="com.strel.game.entities.Score" target="com.strel.game.entities.Entity">
+      <point x="0.0" y="-14.0" />
+      <point x="20.0" y="48.0" />
+      <point x="-79.25" y="48.0" />
+      <point x="27.75" y="14.0" />
+    </edge>
+    <edge source="com.strel.game.entities.road.Cloud" target="com.strel.game.entities.MovingEntity">
+      <point x="0.0" y="-14.0" />
+      <point x="-124.5" y="126.0" />
+      <point x="-222.0" y="126.0" />
+      <point x="43.5" y="14.0" />
+    </edge>
+    <edge source="com.strel.game.entities.states.PlayerState" target="com.strel.game.entities.states.EntityState">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="com.strel.game.entities.states.PlayerRunning" target="com.strel.game.entities.states.PlayerState">
+      <point x="0.0" y="-14.0" />
+      <point x="-378.5" y="360.0" />
+      <point x="-334.25" y="360.0" />
+      <point x="-27.25" y="14.0" />
+    </edge>
+    <edge source="com.strel.game.entities.states.PlayerJumping" target="com.strel.game.entities.states.PlayerState">
+      <point x="0.0" y="-14.0" />
+      <point x="-235.5" y="360.0" />
+      <point x="-279.75" y="360.0" />
+      <point x="27.25" y="14.0" />
+    </edge>
+    <edge source="com.strel.game.entities.road.Hillock" target="com.strel.game.entities.MovingEntity">
+      <point x="0.0" y="-14.0" />
+      <point x="-218.5" y="136.0" />
+      <point x="-251.0" y="136.0" />
+      <point x="14.5" y="14.0" />
+    </edge>
+    <edge source="com.strel.game.entities.Player" target="com.strel.game.entities.Entity">
+      <point x="0.0" y="-14.0" />
+      <point x="-150.5" y="58.0" />
+      <point x="-116.25" y="58.0" />
+      <point x="-9.25" y="14.0" />
+    </edge>
+    <edge source="com.strel.game.entities.road.Stone" target="com.strel.game.entities.MovingEntity">
+      <point x="0.0" y="-14.0" />
+      <point x="-312.5" y="136.0" />
+      <point x="-280.0" y="136.0" />
+      <point x="-14.5" y="14.0" />
+    </edge>
+    <edge source="com.strel.game.entities.MovingEntity" target="com.strel.game.entities.Entity">
+      <point x="0.0" y="-14.0" />
+      <point x="-265.5" y="48.0" />
+      <point x="-134.75" y="48.0" />
+      <point x="-27.75" y="14.0" />
+    </edge>
+    <edge source="com.strel.game.entities.road.Cactus" target="com.strel.game.entities.MovingEntity">
+      <point x="0.0" y="-14.0" />
+      <point x="-403.0" y="126.0" />
+      <point x="-309.0" y="126.0" />
+      <point x="-43.5" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="62.5" y="331.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
