@@ -3,6 +3,7 @@ package com.strel.game.entities;
 import com.strel.game.engine.Game;
 import com.strel.game.engine.GameConfig;
 import com.strel.game.entities.states.EntityState;
+import com.strel.game.entities.states.PlayerDying;
 import com.strel.game.entities.states.PlayerJumping;
 import com.strel.game.entities.states.PlayerRunning;
 import com.strel.game.input.InputHandler;
@@ -18,7 +19,7 @@ public class Player extends Entity {
 
 
     public Player(int x, int y) {
-        super(x, y);
+        super(x, y, GameConfig.PLAYER_DIMENSION, GameConfig.PLAYER_DIMENSION);
         state = new PlayerRunning(this);
     }
     
@@ -35,6 +36,14 @@ public class Player extends Entity {
         // if not running and previous state complete, run again
         else if (!(state instanceof PlayerRunning) && state.isComplete())
             state = new PlayerRunning(this);
+    }
+
+    /**
+     * Player kills himself and game ends. It may be provoked by
+     * another entity (cactus).
+     */
+    public void suicide() {
+        state = new PlayerDying(this);
     }
 
     @Override

@@ -22,12 +22,16 @@ public interface GameConfig {
     public int      PAUSE_MENU_X        = DEFAULT_WIDTH / (SCALE * 2) - PAUSE_MENU_MSG.length() * SCALE - 10;
     public int      PAUSE_MENU_Y        = DEFAULT_HEIGHT / (SCALE * 2) - 5;
 
+    public String   END_MENU_MSG      = "<< You lose :( Press space to start again >>";
+    public int      END_MENU_X        = DEFAULT_WIDTH / (SCALE * 2) - PAUSE_MENU_MSG.length() * SCALE - 10;
+    public int      END_MENU_Y        = DEFAULT_HEIGHT / (SCALE * 2) - 5;
+
     public int PLAYER_X_POS             = 10;
     public int PLAYER_Y_POS             = 70;
     public int PLAYER_DIMENSION         = 45;
-    public int PLAYER_MAX_JUMP_HEIGHT   = 60;
-    public int PLAYER_JUMP_SPEED        = -3;
-    public int PLAYER_RUN_SPEED         = 6;
+    public int PLAYER_MAX_JUMP_HEIGHT   = 80;
+    public int PLAYER_JUMP_SPEED        = -5;
+    public int PLAYER_RUN_SPEED         = 7;
 
     public int SCORE_X_POS              = 10;
     public int SCORE_Y_POS              = 10;

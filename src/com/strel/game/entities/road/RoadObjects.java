@@ -2,6 +2,7 @@ package com.strel.game.entities.road;
 
 import com.strel.game.engine.GameConfig;
 import com.strel.game.entities.Entity;
+import com.strel.game.entities.Player;
 
 import java.awt.*;
 
@@ -48,6 +49,17 @@ public class RoadObjects {
                 return i;
 
         return -1;
+    }
+
+    public boolean testCollision(Player player) {
+        for (Entity e : objects) {
+            if (e != null) {
+                if (e.testCollision(player))
+                    return true;
+            }
+        }
+
+        return false;
     }
 
     public void update(long elapsedTime) {

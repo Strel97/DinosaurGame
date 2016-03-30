@@ -5,6 +5,7 @@ import com.strel.game.engine.Game;
 import com.strel.game.engine.GameConfig;
 import com.strel.game.GamePanel;
 import com.strel.game.entities.Entity;
+import com.strel.game.entities.Player;
 
 import java.awt.*;
 import java.util.*;
@@ -19,7 +20,7 @@ public class Road extends Entity {
 
 
     public Road(int x, int y) {
-        super(x, y);
+        super(x, y, GameConfig.DEFAULT_WIDTH, GameConfig.ROAD_HEIGHT);
         rand = new Random();
 
         objects = new RoadObjects();
@@ -81,6 +82,10 @@ public class Road extends Entity {
         int y = GameConfig.CACTUS_GEN_Y;
 
         objects.add(new Cactus(x, y));
+    }
+
+    public boolean testCollision(Player player) {
+        return objects.testCollision(player);
     }
 
     @Override

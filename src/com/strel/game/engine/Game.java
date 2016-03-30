@@ -56,10 +56,7 @@ public class Game implements Runnable {
         if (running)
             return;
 
-        player = new Player(GameConfig.PLAYER_X_POS, GameConfig.PLAYER_Y_POS);
-        road = new Road(GameConfig.ROAD_X_POS, GameConfig.ROAD_Y_POS);
-
-        state = new GamePaused();
+        initGame();
 
         running = true;
         thread = new Thread(this);
@@ -71,6 +68,25 @@ public class Game implements Runnable {
             return;
 
         running = false;
+    }
+
+    /**
+     * Game goes to End state, that is responsible for
+     * showing score and proposing start game again.
+     */
+    public void endGame() {
+        state = new GameEnd();
+    }
+
+    private void initGame() {
+        player = new Player(GameConfig.PLAYER_X_POS, GameConfig.PLAYER_Y_POS);
+        road = new Road(GameConfig.ROAD_X_POS, GameConfig.ROAD_Y_POS);
+
+        state = new GamePaused();
+    }
+
+    public void resetGame() {
+        initGame();
     }
 
     @Override
@@ -101,7 +117,7 @@ public class Game implements Runnable {
 
 
             try {
-                Thread.sleep(20);
+                Thread.sleep(15);
             }
             catch (InterruptedException ex) {
                 ex.printStackTrace();

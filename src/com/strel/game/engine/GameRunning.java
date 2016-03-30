@@ -24,6 +24,9 @@ public class GameRunning implements GameState {
     public void update(long elapsedTime) {
         player.update(elapsedTime);
         road.update(elapsedTime);
+
+        if (road.testCollision(player))
+            Game.getInstance().endGame();
     }
 
     @Override

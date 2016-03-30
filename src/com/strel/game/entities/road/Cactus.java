@@ -25,12 +25,14 @@ public class Cactus extends MovingEntity {
         type = rand.nextInt(GameConfig.CACTUS_TYPES);
         img = ImageLoader.getCactusSprite()[type];              // Getting random sprite for cactus
 
+        /**
+         * Logic is such, that
+         */
+        setWidth(img.getWidth());
+        setHeight(img.getHeight());
+
         // Changing y to draw different type of cactus on the same y pos
         this.y = GameConfig.ROAD_Y_POS - img.getHeight() + 10;
-    }
-
-    public boolean testCollision() {
-        return false;
     }
 
     @Override

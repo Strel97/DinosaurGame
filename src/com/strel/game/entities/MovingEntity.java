@@ -12,6 +12,10 @@ public abstract class MovingEntity extends Entity {
         super(x, y);
     }
 
+    public MovingEntity(int x, int y, int width, int height) {
+        super(x, y, width, height);
+    }
+
     @Override
     public void update(long elapsedTime) {
         x -= GameConfig.PLAYER_RUN_SPEED;
